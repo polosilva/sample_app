@@ -1,9 +1,9 @@
 source 'http://rubygems.org'
 
+gem 'bootstrap'
 gem 'rails', '3.0.11'
 
-source 'http://rubygems.org'
-
+gem 'spork'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
