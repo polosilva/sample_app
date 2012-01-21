@@ -3,7 +3,6 @@ source 'http://rubygems.org'
 gem 'bootstrap'
 gem 'rails', '3.0.11'
 
-gem 'spork'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
@@ -29,6 +28,7 @@ gem 'sqlite3', '1.3.3', :group => :development
 # Bundle gems for the local environment. Make sure to
 # put test-only gems in this group so their generators
 # and rake tasks are available in development mode:
+
 group :development do
    gem 'rspec-rails', '2.6.1'
  end
@@ -36,6 +36,7 @@ group :development do
 group :test do 
 	gem 'rspec-rails', '2.6.1'
 	gem 'webrat', '0.7.1'
+	gem 'spork', '0.9.0.rc8'
 	gem 'autotest' , '4.4.6'
 	gem 'autotest-rails-pure' , '4.1.2'
 	
