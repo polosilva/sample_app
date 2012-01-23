@@ -25,7 +25,7 @@ class User < ActiveRecord::Base
 
     # Automatically create the virtual attribute 'password_confirmation'.
     validates :password, :presence     => true,
-                         :confirmation => true,
+						 :confirmation => true,
                          :length       => { :within => 6..40 }
 
     before_save :encrypt_password
@@ -34,13 +34,14 @@ class User < ActiveRecord::Base
     	#encrypted_password todavia no esta declarado arriba
     	#pero existe en la BBDD
 		encrypted_password == encrypt(submitted_password) 
-    end
+	end
 
-    def self.authenticate(email, submitted_password)
-    	user = find_by_email(email)
-    	return nil if user.nil?
-    	return user if user.has_password?(submitted_password)
-    end
+	def self.authenticate(email, submitted_password)
+		user = find_by_email(email)
+		return nil if user.nil?
+		return user if user.has_password?(submitted_password)
+		return nil
+	end
 
     private
 
