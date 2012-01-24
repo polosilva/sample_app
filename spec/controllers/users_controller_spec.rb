@@ -292,7 +292,7 @@ describe UsersController do
                                            :content => "Next")
       end
     end
-
+  end
   
   describe "DELETE 'destroy'" do
 
